@@ -1,0 +1,22 @@
+1. encapsulation : putting methods and porperties in one unit. properties of a class can only be accessed by a method of that class,
+   encapsulation  is done using data abstraction/data hiding
+
+2. inhertience 
+
+3. types of inheritence : 1) single 2) mutlilevel 3) multiple 4) hierarchical 5) hybrid
+
+4. diamond problem in inhertience
+
+5. polymorphism : 1) compile time : function and operator overloading 2)runtime : function overriding .for overriding use virtual keyword
+
+6. virtual function : runtime polymorphism , function overriding
+
+7. friend function : if I declare any function as the friend of a class then that function can access private members of that class .
+
+8. protected class members are only accessible by the functions of the class itself and it's parent and child classes
+
+9.Protected access modifier is similar to that of private access modifiers, the difference is that the class member declared as Protected are inaccessible outside the class but they can be accessed by any subclass(derived class) of that class.
+Example: 
+
+10.The class members declared as private can be accessed only by the functions inside the class. They are not allowed to be accessed directly by any object or function outside the class. Only the member functions or the friend functions are allowed to access the private data members of a class.
+Example:
