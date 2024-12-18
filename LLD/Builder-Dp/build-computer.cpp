@@ -116,13 +116,13 @@ class SonyBuilder : public Builder{
 class Director{
 
     public :
-    Desktop computerBuild(Builder &builderType){
-        builderType.buildCompany();
-        builderType.buildKeyboard();
-        builderType.buildMouse();
-        builderType.buildRam();
-        builderType.buildSpeaker();
-        return builderType.getDesktop();
+    Desktop computerBuild(Builder* builderType){
+        builderType->buildCompany();
+        builderType->buildKeyboard();
+        builderType->buildMouse();
+        builderType->buildRam();
+        builderType->buildSpeaker();
+        return builderType->getDesktop();
 
     }
 
@@ -132,11 +132,11 @@ class Director{
 
 int main(){
 
-    Director objDirector;
+    Director* objDirector = new Director(); //since no constructor is there we can simply do Desktop desktop as well
 
-    SonyBuilder sonyObj;
+    SonyBuilder* sonyObj = new SonyBuilder();//since no constructor is there we can simply do Desktop desktop as well
 
-    Desktop desktop = objDirector.computerBuild(sonyObj);
+    Desktop desktop = objDirector->computerBuild(sonyObj);
 
     desktop.display();
 
