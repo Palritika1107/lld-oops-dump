@@ -1,0 +1,19 @@
+why was size_t data type used for counter variable (concerete iterator) instead of integer :
+
+What is size_t in C++?
+size_t is an unsigned integer type defined in the <cstddef> or <stddef.h> header, commonly used to represent the size of objects in memory or as indices in data structures.
+
+Key Characteristics:
+Platform-Dependent Width:
+
+The size of size_t depends on the architecture:
+On 32-bit systems: typically 4 bytes.
+On 64-bit systems: typically 8 bytes.
+It is guaranteed to be large enough to store the maximum possible size of any object or container in memory on that system.
+Unsigned Type:
+
+It only holds non-negative values (0 or positive integers).
+This makes it suitable for sizes and indices, which cannot be negative.
+Associated with Iterators:
+
+Iterators of standard containers (like std::vector, std::array, std::string) often use size_t for indexing or distance calculations because it is the most natural type for non-negative sizes.
