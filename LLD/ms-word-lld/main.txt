@@ -1,0 +1,22 @@
+// Main Function
+int main() {
+    Document document;
+    CommandManager commandManager;
+
+    // Execute commands
+    commandManager.executeCommand(make_shared<AddCharacterCommand>(document, 'H'));
+    commandManager.executeCommand(make_shared<AddCharacterCommand>(document, 'e'));
+    commandManager.executeCommand(make_shared<AddCharacterCommand>(document, 'l'));
+    commandManager.executeCommand(make_shared<AddCharacterCommand>(document, 'l'));
+    commandManager.executeCommand(make_shared<AddCharacterCommand>(document, 'o'));
+
+    cout << "\nUndo Operations:" << endl;
+    commandManager.undo();
+    commandManager.undo();
+
+    cout << "\nRedo Operations:" << endl;
+    commandManager.redo();
+    commandManager.redo();
+
+    return 0;
+}

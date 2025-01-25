@@ -30,11 +30,11 @@ public:
         cout << "Char factory instance initialized" << endl;
     }
 
-    std::shared_ptr<Iletter> createChar(char charValue, string fontType, int size) {
+    shared_ptr<Iletter> createChar(char charValue, string fontType, int size) {
         if (charMap.find(charValue) != charMap.end()) {
             return charMap[charValue];
         } else {
-            std::shared_ptr<Iletter> docChar = std::make_shared<DocumentCharacter>(charValue, fontType, size);
+            shared_ptr<Iletter> docChar = make_shared<DocumentCharacter>(charValue, fontType, size);
             charMap[charValue] = docChar;
             return docChar;
         }
