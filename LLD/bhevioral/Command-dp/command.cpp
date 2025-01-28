@@ -114,6 +114,8 @@ int main(){
     invokerObj1->invokeCommand();
     invokerObj2->invokeCommand();
 
+    //there should be on einvoker object , iinvoker should form a list o fcommands and invoke some thing like that
+
     
 
 
